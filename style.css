@@ -21,8 +21,13 @@
 .text-primary{
     color: white;
 }
+.white-text{
+    font-size: 3rem;
+    font-weight: 700;
+
+}
 .text-grey{
-    color: gainsboro;
+    color: #FFFFFF;
 }
 .gradient-text-color{ 
   background: linear-gradient(190deg,#9100F8,#FB09B4,#F7E93F
@@ -64,8 +69,8 @@ rgba(145, 0, 248, 1));;
 }
 
 .btn-green{
-    color: green;
-    border: 2px solid green;
+    color:  #00FF88;
+    border: 2px solid #00FF88;
     padding: 12px 20px;
     border-radius: 50px;
     cursor: pointer;
@@ -137,6 +142,7 @@ rgba(145, 0, 248, 1));;
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 100px;
     
 }
 
@@ -151,3 +157,94 @@ rgba(145, 0, 248, 1));;
 /* .banner-image{
     width: 100%;
 } */
+.about{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+.about h1{
+    gap: 20;
+}
+.about p{
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 200;
+}
+/* some facts related styles */
+.rating-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+}
+.rating-card{
+    
+    width: 240px;
+    height: 240px;
+   
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-number{
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #00FF88;
+}
+
+.rating-name{
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.fact-description{
+    max-width: 540px;
+}
+.grid-section{
+    margin: 120px 200px;
+       padding: 40px;
+     gap: 16;
+     border-radius: 40px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+    background-color: #230E3D;
+}
+.grid-container{
+     background-color: #35116566;
+  
+}
+#audio{
+    grid-area: audio;
+}
+#mobile{
+    grid-area: mobile;
+
+}
+#global{
+    grid-area: global;
+}
+#exclusive{
+    grid-area: exclusive;
+
+}
+#rich{
+    grid-area: rich;
+}
+ .grid-container {
+     display: grid;
+     gap: 20px;
+     grid-template-areas:
+         "audio      mobile      mobile"
+         "audio      global      global"
+         "exclusive  exclusive   rich "
+ }
