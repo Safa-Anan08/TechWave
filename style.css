@@ -6,9 +6,9 @@
   font-weight: 400;
   font-style: normal;
 }
-/* *{
-        background-color: #1A0B2E;
-} */
+*{
+       margin: 0;
+}
 .main-bg-color{
     background-color: #1A0B2E;
     margin: 0;
@@ -107,6 +107,12 @@ rgba(145, 0, 248, 1));;
 
 .bg-remove{
     background: none;
+}
+.line{
+    width: 1200px;
+    height: 0;
+    border: 1px solid grey;
+    align-items: center;
 }
 .navbar{
     justify-content: space-between;
@@ -210,6 +216,7 @@ rgba(145, 0, 248, 1));;
 }
 .banner-content{
     text-align: center;
+   
 }
 /* .btns {
   display: flex;
@@ -558,7 +565,7 @@ rgba(145, 0, 248, 1));;
 /* RESPONSIVE */
 @media (max-width: 768px) {
      .navbar {
- 
+    background-color: #1A0B2E;
     justify-content: space-between;
   }
  .brand {
