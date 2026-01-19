@@ -9,6 +9,9 @@
 *{
        margin: 0;
 }
+html, body {
+  overflow-x: hidden;
+}
 .main-bg-color{
     background-color: #1A0B2E;
     margin: 0;
@@ -109,16 +112,23 @@ rgba(145, 0, 248, 1));;
     background: none;
 }
 .line{
-    width: 1200px;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
     height: 0;
     border: 1px solid grey;
     align-items: center;
 }
 .navbar{
+    position: relative;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+   
 }
 
 .brand{
@@ -216,25 +226,10 @@ rgba(145, 0, 248, 1));;
 }
 .banner-content{
     text-align: center;
+    margin: 50px;
    
 }
-/* .btns {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 
-.btn-gradient,
-.btn-green {
-  position: static !important;
-  max-width: 100%;
-  box-sizing: border-box;
-} */
-  /* ===== BUTTON OVERLAP FORCE FIX ===== */
-
-/* parent control */
-/* button wrapper */
 .btns {
   display: flex;
   justify-content: center;
@@ -261,7 +256,6 @@ rgba(145, 0, 248, 1));;
     font-weight: 200;
     padding: 1%;
 }
-/* some facts related styles */
 .rating-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -299,24 +293,12 @@ rgba(145, 0, 248, 1));;
     max-width: 540px;
 }
 
- /* Section bg */
 .why-choose {
-  /* background: linear-gradient(180deg, #1b0835, #2a0f52); */
   padding: 80px 20px;
   color: #fff;
   text-align: center;
   background-color: rgba(53, 17, 101, 0.4);
 }
-
-/* .why-choose h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
-} */
-
-/* GRID */
-
-
-/* Cards */
 .card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -354,7 +336,7 @@ rgba(145, 0, 248, 1));;
     align-items: center;
     gap: 4px;
 }
-/* Grid area mapping */
+
 .card-1 { grid-area: card1; }
 .card-2 { grid-area: card2; }
 .card-3 { grid-area: card3; }
@@ -391,18 +373,12 @@ rgba(145, 0, 248, 1));;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* .episode-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-} */
-
-/* VIDEO */
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* 🔥 MOST IMPORTANT */
+  aspect-ratio: 16 / 9;   
   border-radius: 16px;
-  overflow: hidden;       /* 🔥 fixes black edges */
+  overflow: hidden;      
 
 }
 
@@ -414,7 +390,7 @@ rgba(145, 0, 248, 1));;
   border: none;
 }
 
-/* PLAY OVERLAY */
+
 .play-overlay {
   position: absolute;
   inset: 0;
@@ -436,11 +412,7 @@ rgba(145, 0, 248, 1));;
   color: #fff;
 } 
 
- /* .episode-card:hover .play-overlay {
-  opacity: 0;
-}  */
 
-/* CONTENT */
 .card-content {
   padding: 22px;
 }
@@ -490,8 +462,6 @@ rgba(145, 0, 248, 1));;
 }
 .host-icon{
     display: flex;
-    /* height: 15px;
-    width: 15px; */
     gap: 10px;
     padding: 1px;
     background: none;
@@ -511,7 +481,7 @@ rgba(145, 0, 248, 1));;
 .footer-wave {
   position: absolute;
   inset: 0;
-  background: url("./assets/footer-bg.png") no-repeat center;
+  background: url("../assets/footer-bg.png") no-repeat center;
   background-size: cover;
   z-index: 1;
 }
@@ -556,18 +526,42 @@ rgba(145, 0, 248, 1));;
   color: #fff;
 }
 
-/* copyright */
+
 .footer-copy {
   font-size: 16px;
   color: #a9a9c9;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
-     .navbar {
-    background-color: #1A0B2E;
-    justify-content: space-between;
+        .navbar {
+    position: relative;
   }
+
+
+  .nav-links,
+  .btn-gradient {
+    display: none;
+  }
+
+
+
+  .navbar::after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    top: 50%;
+   
+transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+  z-index: 99;
+    background: url("./assets/hamburger-menu.png") no-repeat center;
+    background-size: contain;
+
+   
+  }
+
  .brand {
     display: flex;
     align-items: center;
@@ -577,31 +571,7 @@ rgba(145, 0, 248, 1));;
   .brand span {
     display: inline-block;
   }
-  /* nav links hide */
-  .nav-links {
-    display: none;
-  }
-
-
-  .btn-gradient {
-    display: none;
-  }
-
-  /* hamburger icon as image */
-  .navbar::after {
-    content: "";
-    width: 28px;
-    height: 28px;
-    background-image: url("./assets/hamburger-menu.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-  }
-    /* per */
-  .nav-links {
-    display: none;
-  }
+ 
    .menu-toggle {
     display: block;
     font-size: 24px;
@@ -620,6 +590,7 @@ rgba(145, 0, 248, 1));;
   }
   .rating-container{
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     font-weight: 900;
     font-size: 48px;
