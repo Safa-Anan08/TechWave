@@ -289,9 +289,6 @@ html, body {
     color: #FFFFFF;
 }
 
-.fact-description{
-    max-width: 540px;
-}
 
 .why-choose {
   padding: 80px 20px;
@@ -348,9 +345,7 @@ html, body {
 .card-5 { grid-area: card5; }
 
 .grid-section {
-  max-width: 1100px;
-  /* margin-left:10% ;
-  margin-right: 10%; */
+  max-width: 1142px;
   margin: 0 auto;
   display: grid;
   gap: 25px;
