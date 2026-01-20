@@ -617,11 +617,20 @@ rgba(145, 0, 248, 1));;
   .rating-container{
     display: grid;
     align-items: center;
-    justify-content: space-around;
+    
     grid-template-columns: repeat(2, 1fr);
     font-weight: 900;
     font-size: 48px;
     line-height: 58px;
+}
+.rating-number{
+    font-size: 1.5rem;
+}
+.rating-name{
+    flex-wrap: nowrap;
+    font-size: .9rem;
+    font-weight: 200;
+    color: #FFFFFF;
 }
   .grid-section {
     margin-left: 0;
