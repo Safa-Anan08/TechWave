@@ -567,7 +567,7 @@ rgba(145, 0, 248, 1));;
 }
 
 
-@media (min-width: 577px) and (max-width: 992px) {
+@media (max-width: 577px) and (max-width: 992px) {
     .navbar {
     position: relative;
   }
